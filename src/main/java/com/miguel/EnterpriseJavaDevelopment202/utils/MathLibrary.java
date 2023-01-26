@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MathLibrary {
-
+//Employing TDD, create a method that takes in an integer n and returns an array of all odd integers from 1 to n. Write your tests first!
     public int[] getOddNumbers(int n) {
         int[] oddNumbers = new int[(n + 1) / 2];
         int index = 0;

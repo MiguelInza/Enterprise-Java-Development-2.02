@@ -21,11 +21,21 @@ class MathLibraryTest {
     }
 
     @Test
-    void getOddNumbers_array_integer() {
-        int[] test = new int[]{1};
-        assertArrayEquals(test, mathLibrary.getOddNumbers(1));
-        int[] test2 = new int[]{1, 3};
-        assertArrayEquals(test2, mathLibrary.getOddNumbers(4));
-
+    void testGetOddNumbers() {
+        int[] expected = {1, 3, 5, 7, 9};
+        int[] result = mathLibrary.getOddNumbers(10);
+        assertArrayEquals(expected, result);
+    }
+    @Test
+    public void testGetOddNumbers_0() {
+        int[] expected = {};
+        int[] result = mathLibrary.getOddNumbers(0);
+        assertArrayEquals(expected, result);
+    }
+    @Test
+    public void testGetOddNumbers_1() {
+        int[] expected = {1};
+        int[] result = mathLibrary.getOddNumbers(1);
+        assertArrayEquals(expected, result);
     }
 }
